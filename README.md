@@ -24,9 +24,20 @@ When a user starts a workout, a new session is initialized and saved to the data
    notes: "my shoulder hurts today so i have lowered the weight for all exercises today"<br>
 
 ### exercises table
-A table will hold all exercises that can be added to the splits/days. They will be predefined from release (For now, will need to find a solution for only adding custom-added exercises locally.<br>
+A table will hold all exercises that can be added to the splits/days. They will be predefined from release. Users can create custom splits and store them tied to their user ID. workoutsplits table references user_id, so custom tables will only be showed for the user creating them. Template splits will have user_id = null.<br>
 3. exercises<br>
   id: 3<br>
   name: "Bicep Curl"<br>
   description: "Grows your bicep"<br>
   target_muscle: "Bicep"<br>
+
+### exerciselogs table
+This table will specify how many reps, weight and other detials is happening per exercise in a session. I will have a auto incrementing ID and will have many entries tied to the relevans session id, resulting in a list of exercises performed in a current session and their details.<br>
+4. ecerciselogs<br>
+   id: 203 (PK)
+   session_id: 1 (FK)
+   exercise_id: 3 (FK)
+   order_in_session: 1
+   set_number: "3-4"
+   reps: "10-12"
+   weight: 23.0
