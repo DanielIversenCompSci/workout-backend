@@ -34,10 +34,10 @@ A table will hold all exercises that can be added to the splits/days. They will 
 ### exerciselogs table
 This table will specify how many reps, weight and other detials is happening per exercise in a session. I will have a auto incrementing ID and will have many entries tied to the relevans session id, resulting in a list of exercises performed in a current session and their details.<br>
 4. ecerciselogs<br>
-   id: 203 (PK)
-   session_id: 1 (FK)
-   exercise_id: 3 (FK)
-   order_in_session: 1
-   set_number: "3-4"
-   reps: "10-12"
-   weight: 23.0
+   id: 203 (PK)<br>
+   session_id: 1 (FK)<br>
+   exercise_id: 3 (FK)<br>
+   order_in_session: 1<br>
+   set_number: "3-4"<br>
+   reps: "10-12"<br>
+   weight: 23.0<br>
